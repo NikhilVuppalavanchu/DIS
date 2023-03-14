@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Onnline Library</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      position: absolute;
+      top: 18%;
+      left: 10%;
+      right: 3%;
+
+      display: flex;
+    }
+    .box {
+      width: 90%;
+      height: 100%;
+      border: 1px solid black;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #fff;
+      overflow: hidden; /* hide scrollbars */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 3%;
+    }
+
+    .image-container {
+      flex-basis: 33.33%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      /* set height of image container to one third of the container */
+    }
+
+    .text-container {
+      flex-basis: 33.33%;
+      display: flex;
+      color: #fefefe;
+      background-color: #000000;
+      font-style: italic;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      margin: auto;
+      font-size: 18px;
+      padding: 50px;
+      align-items: center;
+    }
+
+    .grid-container {
+      flex-basis: 33.33%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      grid-template-rows: repeat(1, 1fr);
+    }
+
+    .grid-item {
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .book-image {
+      margin: auto;
+      width: 100%;
+      height: auto;
+    }
+    body {
+      font-family: sans-serif;
+      background-color: #116466;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+      background: #116466;
+      padding: 14px 28px;
+      border-radius: 30px;
+      transition: 0.5s;
+    }
+
+    a:hover {
+      /* background-color: #000; */
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      /* color: rgb(255, 255, 255); */
+      border: 1px solid white;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #e8a87c;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 300px;
+    }
+
+    .navigation a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .navigation a:hover {
+      color: #ddd;
+    }
+
+    /* footer {
+      background-color: #333;
+      padding: 20px 0;
+      border-top: 1px solid #ccc;
+    }
+
+    .footer-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+    .footer-wrapper p {
+      margin: 0;
+      font-size: 14px;
+    } */
+  </style>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          class="logo"
+          src="https://static.vecteezy.com/system/resources/thumbnails/004/852/937/small/book-read-library-study-line-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg"
+          alt="Logo"
+        />
+        <h1><i>Liberio</i></h1>
+      </div>
+
+      <div class="nav-container">
+        <nav class="navigation">
+          <a href="Home.html">Home</a>
+          <a href="bookspage.html">Books</a>
+          <a href="#">About</a>
+          <a href="loginpage.html">Login</a>
+          <a href="#">Careers</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="box">
+        <div class="image-container">
+          <img
+            src="new.jpeg"
+            alt="Image description"
+            class="box-image"
+            width="1149"
+            height="500"
+          />
+        </div>
+        <div class="text-container">
+          <p>
+            Thank you for visiting our online library! We are committed to
+            providing you with the best possible resources and services for your
+            learning and enjoyment
+          </p>
+        </div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="coverpage.jpg" alt="Image" class="book-image" />
+          </div>
+          <div class="grid-item">
+            <img src="coverpage.jpg" alt="Image" class="book-image" />
+          </div>
+          <div class="grid-item">
+            <img src="coverpage.jpg" alt="Image" class="book-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <footer>
+      <div class="footer-wrapper">
+        <p>&copy; 2023 My Website</p>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer> -->
+  </body>
+</html>
