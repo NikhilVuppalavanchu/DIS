@@ -2,353 +2,214 @@
 <html>
   <head>
     <title>Product Grid Display Page</title>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        background-color: #e8a87c;
-        display: flexbox;
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        text-align: center;
-      }
-      a {
-        display: block;
-        text-decoration: none;
-        font-size: 18px;
-        color: #fff;
-        background: #116466;
-        padding: 14px 28px;
-        border-radius: 30px;
-        transition: 0.1s;
-        /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
-      }
-      a:hover {
-        /* background-color: #000; */
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-          0 17px 50px 0 rgba(0, 0, 0, 0.19);
-        /* color: rgb(255, 255, 255); */
-        border: 1px solid white;
-      }
-
-      header ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 20px;
-      }
-      header ul li {
-        margin-right: 20px;
-      }
-      .container {
-        margin: 20px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
-      }
-      .product {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: center;
-      }
-      .product img {
-        max-width: 60%;
-      }
-      .product h3 {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-size: 18px;
-      }
-      .product p {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-      .product button {
-        display: block;
-        text-decoration: none;
-        font-size: 18px;
-        color: #fff;
-        background: #116466;
-        padding: 7px 28px;
-        border-radius: 30px;
-        transition: 0.5s;
-        /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
-        /* color: rgb(255, 255, 255); */
-        border: 1px solid white;
-        /* background-color: #116466; 
-			color: #fff;
-			border: none;
-			padding: 10px;
-			cursor: pointer;
-			transition: all 0.3s ease; */
-      }
-      .product button:hover {
-        background-color: #fff;
-        color: #333;
-        border: 1px solid white;
-        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-          0 17px 50px 0 rgba(0, 0, 0, 0.19);
-      }
-      form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      input[type="text"] {
-        padding: 14px 28px;
-        border-radius: 5px;
-        border: none;
-        margin-right: 10px;
-      }
-
-      button[type="submit"] {
-        padding: 14px 28px;
-        background-color: #4285f4;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-      }
-      /* Extra small devices (phones) */
-      @media only screen and (max-width: 743px) {
-        .login-box {
-          width: 280px;
-          height: auto;
-          padding: 50px 20px;
-        }
-
-        .login-box h2 {
-          font-size: 20px;
-        }
-
-        .navigation {
-          display: block;
-          width: 100%;
-        }
-
-        .navigation a {
-          display: block;
-          width: 100%;
-          margin: 10px 0;
-        }
-      }
-      .wrapper {
-        margin: 0 auto;
-        max-width: 960px;
-      }
-
-      footer {
-        background-color: #333;
-        padding: 20px 0;
-        border-top: 1px solid #ccc;
-      }
-
-      .footer-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #fff;
-      }
-
-      .footer-wrapper p {
-        margin: 0;
-        font-size: 14px;
-      }
-
-      nav ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      nav li {
-        margin-right: 20px;
-      }
-
-      nav a {
-        color: #fff;
-        text-decoration: none;
-      }
-
-      nav a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="bookspage.css" />
   </head>
   <body>
     <header>
-      <h1>My Online Store</h1>
-      <ul>
-        <li>
+      <div class="logo-container">
+        <img class="logo" src="logo.jpg" alt="Logo" />
+        <h1><i>Liberio</i></h1>
+      </div>
+      <div class="nav-container">
+        <nav class="navigation">
+          <a href="home.html">Home</a>
+          <a href="bookspage.html">Books</a>
+          <a href="aboutpage.html">About</a>
+          <a href="loginpage.html">Login</a>
           <form>
             <input type="text" placeholder="Search..." />
             <button type="submit">Go</button>
           </form>
-        </li>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="bookspage.html">Books</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Logout</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
+        </nav>
+      </div>
     </header>
     <div class="container">
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 1" />
-        <h3>Product 1</h3>
-        <p>Author: dsssssssss</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <img
+          src="Image\Atomic Habits.jpg"
+          alt="Atomic Habits"
+          width="500"
+          height="300"
+        />
+        <h3>Atomic Habits</h3>
+        <p>Author: James Clear</p>
+        <p>Self-Help</p>
         <center>
           <center><button>Add to Cart</button></center>
         </center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 2" />
-        <h3>Product 2</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="images/Stop Overthinking.jpg"
+          alt="Stop Overthinking"
+          width="500"
+          height="300"
+        />
+        <h3>Stop Overthinking</h3>
+        <p>Author:Nick Trenton</p>
+        <p>Mental Health</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 3" />
-        <h3>Product 3</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <img
+          src="Images\Gray Mountain.jpg"
+          alt="Gray Mountain"
+          width="500"
+          height="300"
+          `
+        />
+        <h3>Gray Mountain</h3>
+        <p>Author: John Grisham</p>
+        <p>Best Mystery, Thriller & Suspense</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 4" />
-        <h3>Product 4</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse
-          contactur.
-        </p>
+        <img src="Images\Power.jpg" alt="Power" width="500" height="300" />
+        <h3>Power</h3>
+        <p>Author: Robert Greene</p>
+        <p>Crime Drama</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 5" />
-        <h3>Product 5</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.
-        </p>
+        <img
+          src="Images\Practical Law of Attraction.jpg"
+          alt="Practical Law of Attraction"
+          width="500"
+          height="300"
+        />
+        <h3>Practical Law of Attraction</h3>
+        <p>Author: Victoria Gallagher</p>
+        <p>Science</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 6" />
-        <h3>Product 6</h3>
-        <p>Author: dsssssssss</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <img src="Images\369.jpg" alt="369" width="500" height="300" />
+        <h3>369 Manifesting Journal</h3>
+        <p>Author: Celestial Cohesion</p>
+        <p>Secret to Attracting Your Best Life</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="Images\hadowy Stillness.jpg"
+          alt="Shadowy Stillness"
+          width="500"
+          height="300"
+        />
+        <h3>Shadowy Stillness</h3>
+        <p>Author: Clair McIntyres</p>
+        <p>Horror</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="Images\Sun Crossed.jpg"
+          alt="Sun Crossed"
+          width="500"
+          height="300"
+        />
+        <h3>Sun Crossed</h3>
+        <p>Author: Elizabeth Briggs</p>
+        <p>Romance</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="Images\Trust the Grind.jpg"
+          alt="Trust the Grind"
+          width="500"
+          height="300"
+        />
+        <h3>Trust the Grind</h3>
+        <p>Author: Jeremy Bhandari</p>
+        <p>Sports</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="Images\Jesus Listens.jpg"
+          alt="Jesus Listens"
+          width="500"
+          height="300"
+        />
+        <h3>Jesus Listens</h3>
+        <p>Author: Sarah Young</p>
+        <p>Devotional</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="Images\The Terminal List.jpg"
+          alt="The Terminal List"
+          width="500"
+          height="300"
+        />
+        <h3>The Terminal List</h3>
+        <p>Author: Jack Carr</p>
+        <p>Thriller</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="Images\Tableau Strategies.jpg"
+          alt="Tableau Strategies"
+          width="500"
+          height="300"
+        />
+        <h3>Tableau Strategies</h3>
+        <p>Author: Ann Jackson</p>
+        <p>Data Analytics</p>
         <center>
           <center><button>Add to Cart</button></center>
         </center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="Images\JavaScript.jpg"
+          alt="JavaScript"
+          width="500"
+          height="300"
+        />
+        <h3>JavaScript</h3>
+        <p>Author: David Flanagan</p>
+        <p>Programming Language</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src="Images\Mahatma Gandhi.jpg"
+          alt="Mahatma Gandhi"
+          width="500"
+          height="300"
+        />
+        <h3>Mahatma Gandhi</h3>
+        <p>Author: Sachin Sinhal</p>
+        <p>Biopic</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 7" />
-        <h3>Product 7</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <img
+          src=" Images\Upgrade as Futuristic Empaths.jpg"
+          alt="Upgrade as Futuristic Empaths"
+          width="500"
+          height="300"
+        />
+        <h3>Upgrade as Futuristic Empaths</h3>
+        <p>Author: Devi Sunny</p>
+        <p>Clear Career</p>
         <center><button>Add to Cart</button></center>
       </div>
       <div class="product">
-        <img src="coverpage.jpg" alt="Product 8" />
-        <h3>Product 8</h3>
-        <p>Author: dsssssssss</p>
-        <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <img
+          src="Images\I Love You to the Moon and Back.jpg"
+          alt="I Love You to the Moon and Back"
+          width="500"
+          height="300"
+        />
+        <h3>I Love You to the Moon and Back</h3>
+        <p>Author: Amelia Hepworth</p>
+        <p>Love</p>
         <center><button>Add to Cart</button></center>
       </div>
     </div>
@@ -357,8 +218,8 @@
         <p>&copy; 2023 My Website</p>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutpage.html">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
